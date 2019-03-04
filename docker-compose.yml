@@ -1,0 +1,12 @@
+# npu = Neural Process Unit
+version: '3.3'
+
+services:
+    npu:
+        tty: true
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: cnn-audio-classifier
+        volumes:
+            - ./:/root
